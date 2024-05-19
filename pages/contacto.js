@@ -28,7 +28,7 @@ export default function Index({ globalData }) {
             </h2>
             <div className='flex'>
               <h3 className='uppercase text-lg lg:text-xl text-white z-2 relative'>Háblale a La de RH</h3>
-              <Image className='-ml-7 -mb-4' src="/img/contact.svg" width={40} height={40} />
+              <Image className='-ml-7 -mb-4' src="/img/contact.svg" width={40} height={40} alt="" />
             </div>
           </div>  
         </div>

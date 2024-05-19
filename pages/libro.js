@@ -42,7 +42,7 @@ const Review = ({ name, company, stars, reviewTitle, reviewText }) => (
         <b>{name}</b><br />
         {company}
       </p>
-      <Image src={stars} width={120} height={50} className='h-18 object-contain'/>
+      <Image src={stars} width={120} height={50} className='h-18 object-contain' alt=''/>
     </div>
     <h2 className='text-pinkstrong text-xl'>"{reviewTitle}"</h2>
     <p className='tracking-wide text-gray-600 text-base !leading-7' dangerouslySetInnerHTML={{ __html: reviewText }} />
@@ -57,7 +57,7 @@ const Review = ({ name, company, stars, reviewTitle, reviewText }) => (
         <div className="w-full bg-[url('/img/gradient-bg-opacity.svg')] bg-no-repeat bg-contain bg-left bg-bottom relative z-2">
             <main className="flex flex-col gap-14 pt-32 lg:pt-48 mb-12 max-w-7xl mx-auto px-[30px] z-10">     
                 <div className='flex flex-col md:flex-row gap-6 md:gap-10 xl:gap-24 items-center'>
-                    <Image src="/img/book.png" width="200" height="200" className='h-[400px] lg:h-[620px] xl:h-[700px] w-auto object-contain z-10'></Image>
+                    <Image src="/img/book.png" width="200" height="200" className='h-[400px] lg:h-[620px] xl:h-[700px] w-auto object-contain z-10' alt="Haz que Suceda | 40 lecciones del capital humano"></Image>
                     <div className='text-white flex flex-col gap-6 lg:gap-8 font-clash tracking-tightest text-center md:text-left'>
                         <h2 className='!leading-10 text-5xl lg:text-6xl font-helvetica text-pinkstrong'>¡Haz que suceda!</h2>
                         <h3 className='!leading-6 text-xl lg:text-2xl uppercase font-helvetica text-gray-700 tracking-[3px] lg:tracking-[5px]'>41 lecciones del capital humano</h3>
@@ -81,11 +81,11 @@ const Review = ({ name, company, stars, reviewTitle, reviewText }) => (
                 </div>
             </section>
             <section className='flex flex-col lg:flex-row gap-14 items-center max-w-7xl py-10 lg:py-20 mx-auto px-[20px] md:px-[60px]'>
-                <Image src="/img/dora-book.png" width={750} height={900} className='xl:h-[800px] w-auto object-contain'></Image>
+                <Image src="/img/dora-book.png" width={750} height={900} className='xl:h-[800px] w-auto object-contain' alt="Dora Valdez con su libro Haz que Suceda" />
                 <div className='text-white flex flex-col lg:items-start gap-7 font-clash tracking-wide'>
                         <div className="relative w-full">
                             <div className="bg-[url('/img/line-letter.svg')] bg-no-repeat bg-bottom bg-left absolute -bottom-7 w-2/3 h-12 bg-contain z-0"></div> 
-                            <Image src="/img/letter.svg" width={100} height={100} className='h-12 w-18 absolute -top-8 -left-6 Z-1'/>
+                            <Image src="/img/letter.svg" width={100} height={100} className='h-12 w-18 absolute -top-8 -left-6 Z-1' alt=''/>
                             <h2 className="font-belgro text-3xl text-pinkstrong z-2 relative !leading-7">Carta de la autora</h2>      
                         </div>
                         <p className='tex-xl lg:text-2xl font-semibold'>
@@ -122,7 +122,7 @@ const Review = ({ name, company, stars, reviewTitle, reviewText }) => (
                             Reseñas
                         </h3>
                         <h2 className="text-2xl lg:text-3xl relative md:w-2/3">
-                            <div className='z-10 relative'>¿Qué opina la gente que ha leído “Haz que Suceda”? <Image src="/img/happyface.svg" width={200} height={200} className='h-12 absolute bottom-0 right-0 z-0 hidden lg:inline-flex'/></div>
+                            <div className='z-10 relative'>¿Qué opina la gente que ha leído “Haz que Suceda”? <Image src="/img/happyface.svg" width={200} height={200} className='h-12 absolute bottom-0 right-0 z-0 hidden lg:inline-flex' alt="" /></div>
                             <Image src="/img/line-letter.svg" width={100} height={10} alt="" className="absolute -bottom-4 lg:-bottom-14 z-0 left-auto right-0 w-full" />
                         </h2>
                     </div>

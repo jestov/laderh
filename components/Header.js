@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import Logo from '../components/Logo';
-import LinkedInIcon from '../components/icons/LinkedinIcon';
+import LinkedinIcon from '../components/icons/LinkedinIcon';
 import FacebookIcon from '../components/icons/FacebookIcon';
 import InstagramIcon from '../components/icons/InstagramIcon';
 import TiktokIcon from '../components/icons/TiktokIcon';
@@ -58,7 +58,7 @@ export default function Menu() {
     { name: 'Instagram', icon: <InstagramIcon color={iconColor} />, link: 'https://www.instagram.com/lade.rh/' },
     { name: 'Facebook', icon: <FacebookIcon color={iconColor} />, link: 'https://www.facebook.com/LadeRH1/' },
     { name: 'Tiktok', icon: <TiktokIcon color={iconColor} />, link: 'https://www.tiktok.com/@doravaldez.rh' },
-    { name: 'LinkedIn', icon: <LinkedInIcon color={iconColor} />, link: 'https://www.linkedin.com/in/doravaldez/' },
+    { name: 'LinkedIn', icon: <LinkedinIcon color={iconColor} />, link: 'https://www.linkedin.com/in/doravaldez/' },
     { name: 'Youtube', icon: <YoutubeIcon color={iconColor} />, link: 'https://www.youtube.com/@DoraValdezRH' },
     { name: 'Spotify', icon: <SpotifyIcon color={iconColor} />, link: 'https://open.spotify.com/show/2B2OXSopNuJCdldZHV2FH9?si=3eba120d0bb747e6' },
   ];

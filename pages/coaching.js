@@ -45,7 +45,7 @@ export default function Index({ globalData }) {
             </h2>
             <div className='flex gap-2 items-center justify-center'>
                 <h3 className='uppercase text-xl text-white z-2 relative'>Con La de RH</h3>
-                <Image className='-ml-8 -mb-6' src="/img/star.svg" width={90} height={90}  className="w-[55px] md:w-[90px]"/>
+                <Image className='-ml-8 -mb-6 w-[55px] md:w-[90px]' src="/img/star.svg" width={90} height={90} alt="" />
             </div>
           </div>  
         </div>

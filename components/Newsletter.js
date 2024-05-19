@@ -4,7 +4,7 @@ import ArrowIcon from "../components/icons/ArrowIcon";
 const Newsletter = () => {
   return (
     <section className="py-24 max-w-7xl w-full px-[30px] flex flex-col gap-6 md:gap-8 items-center text-white text-center bg-[url('/img/newsletter-bg.png')] bg-center bg-contain bg-no-repeat z-1 relative">
-      <Image src="/img/newsletter.png" width={184} height={184} className="w-32 md:w-[180px]"/>
+      <Image src="/img/newsletter.png" width={184} height={184} className="w-32 md:w-[180px]" alt="Dora Valdez"/>
       <h2 className="text-2xl md:text-3xl uppercase !leading-7">
         Suscríbete a<br />mi newsletter
       </h2>

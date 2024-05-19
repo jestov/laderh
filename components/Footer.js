@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import InstagramIcon from '../components/icons/InstagramIcon';
 import FacebookIcon from '../components/icons/FacebookIcon';
 import TiktokIcon from '../components/icons/TiktokIcon';
-import LinkedInIcon from '../components/icons/LinkedInIcon';
+import LinkedinIcon from '../components/icons/LinkedinIcon';
 import YoutubeIcon from '../components/icons/YoutubeIcon';
 import SpotifyIcon from '../components/icons/SpotifyIcon';
 import ButtonBook from './ButtonBook';
@@ -13,7 +13,7 @@ const socialOptions = [
   { name: 'Instagram', icon: <InstagramIcon color="#ffffff"/>, link: 'https://www.instagram.com/lade.rh/' },
   { name: 'Facebook', icon: <FacebookIcon color="#ffffff"/>, link: 'https://www.facebook.com/LadeRH1/' },
   { name: 'Tiktok', icon: <TiktokIcon color="#ffffff"/>, link: 'https://www.tiktok.com/@doravaldez.rh' },
-  { name: 'LinkedIn', icon: <LinkedInIcon color="#ffffff"/>, link: 'https://www.linkedin.com/in/doravaldez/' },
+  { name: 'LinkedIn', icon: <LinkedinIcon color="#ffffff"/>, link: 'https://www.linkedin.com/in/doravaldez/' },
   { name: 'Youtube', icon: <YoutubeIcon color="#ffffff"/>, link: 'https://www.youtube.com/@DoraValdezRH' },
   { name: 'Spotify', icon: <SpotifyIcon color="#ffffff"/>, link: 'https://open.spotify.com/show/2B2OXSopNuJCdldZHV2FH9?si=3eba120d0bb747e6' },
 ];

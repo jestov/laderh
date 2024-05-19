@@ -18,7 +18,7 @@ export default function AcercaDe({ globalData }) {
         </div>
         <main className="flex flex-col gap-8 pt-12 lg:pt-32 mb-12 max-w-7xl mx-auto px-[30px] z-2 w-full">
             <div className='flex flex-col lg:flex-row lg:gap-2 items-center xl:items-end'>
-                <Image src="/img/dora_about.png" width={800} height={800} className='md:h-[650px] lg:h-[680px] xl:h-[800px] w-auto object-contain' />
+                <Image src="/img/dora_about.png" width={800} height={800} className='md:h-[650px] lg:h-[680px] xl:h-[800px] w-auto object-contain' alt='Dora Valdez'/>
                 <div className='text-white flex flex-col items-center lg:items-start gap-6 font-clash tracking-wide -mt-14 lg:mt-0'>
                     <Logo width="170"/>
                     <h2 className='font-clashdisplay font-semibold !leading-6 text-lg xl:text-2xl'>Dora Valdez es Especialista en Capital Humano y transformación de Negocios.</h2>
@@ -53,10 +53,10 @@ export default function AcercaDe({ globalData }) {
                 <h3 className='font-belgro uppercase text-white text-lg lg:text-2xl'>Mis emprendimientos</h3>
                 <div className='flex justify-center lg:justify-end gap-12'>
                     <Link href="https://wehubble.com">
-                        <Image src="/img/hubble_logo.svg" width="200" height="200" className='h-[25px] lg:h-[35px] w-auto object-contain cursor-pointer' />
+                        <Image src="/img/hubble_logo.svg" width="200" height="200" className='h-[25px] lg:h-[35px] w-auto object-contain cursor-pointer' alt='Hubble'/>
                     </Link>
                     <Link href="https://yingo.work/">
-                        <Image src="/img/yingo_logo.png" width="200" height="200" className='h-[25px] lg:h-[35px] w-auto object-contain cursor-pointer' />
+                        <Image src="/img/yingo_logo.png" width="200" height="200" className='h-[25px] lg:h-[35px] w-auto object-contain cursor-pointer' alt='Yingo'/>
                     </Link>
                 </div>
             </div>
@@ -64,7 +64,7 @@ export default function AcercaDe({ globalData }) {
         <Mission />
         <section className='flex flex-wrap w-full'>
             {[1, 2, 3, 4, 5, 6].map((number) => (
-                <Image key={number.toString()} src={`/img/dora_${number}.jpg`} width={700} height={600} className="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 object-cover opacity-60 transition duration-200 hover:opacity-100 grayscale hover:grayscale-0"/>
+                <Image key={number.toString()} src={`/img/dora_${number}.jpg`} width={700} height={600} alt="Dora Valdez, La de RH" lassName="w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 object-cover opacity-60 transition duration-200 hover:opacity-100 grayscale hover:grayscale-0"/>
             ))}
         </section>
         <Newsletter />
