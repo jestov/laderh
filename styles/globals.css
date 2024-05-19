@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Belgro';
+  src: url('/fonts/Belgro.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('/fonts/ClashGrotesk-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('/fonts/ClashGrotesk-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('/fonts/ClashGrotesk-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Clash Display';
+  src: url('/fonts/ClashDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('/fonts/HelveticaNeueBlack.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+* {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Belgro', sans-serif;
+}
+
+html {
+  overscroll-behavior: none;
+  margin: 0;
+}
+
+body {
+  
+  font-family: 'Clash Grotesk', sans-serif;
+  height: 100%;
+  overflow: auto;
+  margin: 0;
+
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y; /* Ensure touch events are not blocked */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .item {
+    margin-right: 60px !important;
+  }
+
+  .item img {
+    height: 50px !important;
+    max-width: 120px !important;
+  }
+}

@@ -1,0 +1,10 @@
+export default function AcademyIcon({ className }) {
+    return (
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="80" height="80" rx="40" fill="#EA6891"/>
+        <path d="M39.9997 45C46.443 45 51.6663 39.7766 51.6663 33.3333C51.6663 26.89 46.443 21.6666 39.9997 21.6666C33.5564 21.6666 28.333 26.89 28.333 33.3333C28.333 39.7766 33.5564 45 39.9997 45Z" stroke="white" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M33.6837 43.15L31.667 58.3333L40.0003 53.3333L48.3337 58.3333L46.317 43.1333" stroke="white" stroke-width="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    );
+  }
+  

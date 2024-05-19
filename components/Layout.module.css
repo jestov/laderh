@@ -1,0 +1,64 @@
+.colorBackground {
+  left: 60%;
+  top: -450px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    );
+  max-height: 800px;
+  height: 85vh; /* Ajustado al 85% de la altura */
+  max-width: 1400px;
+  width: 70vw;
+  width: 100%;
+  filter: blur(44px);
+  z-index: 0;
+}
+
+.colorBackgroundBottom {
+  left: 60%;
+  top: -350px;
+  transform: translateX(-50%) rotate(190deg);
+  background: radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse at center,
+      #D4517C 20%,
+      transparent 70%
+    );
+  height: 100vh; /* Ajustado al 85% de la altura */
+  max-width: 950px;
+  width: 70vw;
+  width: 100%;
+  filter: blur(44px);
+  z-index: 0;
+}
