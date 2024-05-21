@@ -57,7 +57,7 @@ const Review = ({ name, company, stars, reviewTitle, reviewText }) => (
         <div className="w-full bg-[url('/img/gradient-bg-opacity.svg')] bg-no-repeat bg-contain bg-left bg-bottom relative z-2">
             <main className="flex flex-col gap-14 pt-32 lg:pt-48 mb-12 max-w-7xl mx-auto px-[30px] z-10">     
                 <div className='flex flex-col md:flex-row gap-6 md:gap-10 xl:gap-24 items-center'>
-                    <Image src="/img/book.png" width="200" height="200" className='h-[400px] lg:h-[620px] xl:h-[700px] w-auto object-contain z-10' alt="Haz que Suceda | 40 lecciones del capital humano"></Image>
+                    <Image src="/img/book.png" width="200" height="200" className='h-[400px] lg:h-[620px] xl:h-[700px] w-auto object-contain z-10' alt="Haz que Suceda | 40 lecciones del capital humano" priority={true} />
                     <div className='text-white flex flex-col gap-6 lg:gap-8 font-clash tracking-tightest text-center md:text-left'>
                         <h2 className='!leading-10 text-5xl lg:text-6xl font-helvetica text-pinkstrong'>¡Haz que suceda!</h2>
                         <h3 className='!leading-6 text-xl lg:text-2xl uppercase font-helvetica text-gray-700 tracking-[3px] lg:tracking-[5px]'>41 lecciones del capital humano</h3>

@@ -42,6 +42,22 @@ export default function Menu() {
     };
   }, []);
 
+  useEffect(() => {
+    const handleToggleMenu = () => {
+      if (isMobileMenuOpen) {
+        document.body.style.overflow = 'hidden'; // Bloquea el scroll
+      } else {
+        document.body.style.overflow = ''; // Habilita el scroll
+      }
+    };
+  
+    handleToggleMenu();
+  
+    return () => {
+      document.body.style.overflow = ''; // Asegura que el scroll se habilite cuando se desmonte el componente
+    };
+  }, [isMobileMenuOpen]);
+
   const menuOptions = [
     { name: 'Acerca De', path: '/acerca-de' },
     { name: 'Academia', path: 'https://dora-valdez.mykajabi.com/' },
@@ -193,10 +209,10 @@ export default function Menu() {
             display: flex;
             flex-direction: column;
             position: fixed;
-            top: ${isScrolledPastMain ? '80px' : '115px'};
+            top: ${isScrolledPastMain ? '80px' : '112px'};
             left: 0;
             width: 100%;
-            height: ${isScrolledPastMain ? 'calc(100vh - 80px)' : 'calc(100vh - 115px)'};
+            height: ${isScrolledPastMain ? 'calc(100vh - 80px)' : 'calc(100vh - 112px)'};
             background-color: #D4527D;
             padding: 20px;
             z-index: 999;

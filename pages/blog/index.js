@@ -98,7 +98,7 @@ export default function Index({ posts, globalData }) {
   const renderFirstPost = (post) => (
     <li
       key={post.filePath}
-      className="overflow-hidden flex flex-col lg:flex-row justify-between transition py-5 px-1 block justify-start items-center text-white flex flex-col gap-10 group transition delay-50 duration-250 relative"
+      className="overflow-hidden flex flex-col lg:flex-row justify-between transition py-5 px-1 block justify-start items-center text-white flex flex-col gap-5 md:gap-10 group transition delay-50 duration-250 relative"
     >
       {post.data.time && (
         <span className="absolute z-10 top-9 left-5 px-4 py-2.5 bg-pink rounded-full font-belgro uppercase text-[11px] group-hover:text-white">
@@ -196,7 +196,7 @@ export default function Index({ posts, globalData }) {
         className="absolute top-0 -right-50 opacity-100"
       />
       <main className="w-full bg-[url('/img/gradient-bg.svg')] bg-no-repeat bg-contain bg-left bg-bottom">
-        <div className="flex flex-col gap-8 pt-28 lg:pt-48 max-w-7xl mx-auto px-[30px] z-10">
+        <div className="flex flex-col gap-2 md:gap-8 pt-28 lg:pt-48 max-w-7xl mx-auto px-[30px] z-10">
           <div className="flex flex-col gap-4 items-start">
             <h2 className="text-4xl lg:text-5xl text-primary relative uppercase">
               <span className="z-10 relative">Blog</span>
@@ -210,14 +210,14 @@ export default function Index({ posts, globalData }) {
             </h2>
           </div>
           {currentPage === 1 && (
-            <ul className="grid grid-cols-1 gap-10">
+            <ul className="grid grid-cols-1 gap-2 md:gap-10">
               {renderFirstPost(paginatedPosts[0])}
             </ul>
           )}
           <ul
             className={`grid ${
               currentPage === 1 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
-            } gap-10`}
+            } gap-2 md:gap-10`}
           >
             {paginatedPosts.slice(currentPage === 1 ? 1 : 0).map((post) =>
               currentPage === 1 ? renderOtherPosts(post) : renderOtherPosts(post)

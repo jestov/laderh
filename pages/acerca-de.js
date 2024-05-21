@@ -18,7 +18,7 @@ export default function AcercaDe({ globalData }) {
         </div>
         <main className="flex flex-col gap-8 pt-12 lg:pt-32 mb-12 max-w-7xl mx-auto px-[30px] z-2 w-full">
             <div className='flex flex-col lg:flex-row lg:gap-2 items-center xl:items-end'>
-                <Image src="/img/dora_about.png" width={600} height={700} className='md:h-[650px] lg:h-[680px] xl:h-[800px] w-auto object-contain' alt='Dora Valdez'/>
+                <Image src="/img/dora_about.png" width={600} height={700} className='md:h-[650px] lg:h-[680px] xl:h-[800px] w-auto object-contain' alt='Dora Valdez' priority={true}/>
                 <div className='text-white flex flex-col items-center lg:items-start gap-6 font-clash tracking-wide -mt-14 lg:mt-0'>
                     <Logo width="170"/>
                     <h2 className='font-clashdisplay font-semibold !leading-6 text-lg xl:text-2xl'>Dora Valdez es Especialista en Capital Humano y transformación de Negocios.</h2>

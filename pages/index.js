@@ -1,10 +1,7 @@
 import Link from 'next/link';
 import Image from   'next/image';
 import { getPosts } from '../utils/mdx-utils';
-import { useEffect } from 'react';
-
 import Layout, { GradientBackground } from '../components/Layout';
-
 import ArrowIcon from '../components/icons/ArrowIcon';
 import AcademyIcon from '../components/icons/AcademyIcon';
 import CoachingIcon from '../components/icons/CoachingIcon';
@@ -18,8 +15,9 @@ import Newsletter from '../components/Newsletter';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
 import Mission from '../components/Mission';
+import React from 'react';
 
-export default function Index({ posts, solutions, globalData }) {
+export default function Index({ posts, globalData }) {
 
   const services = [
     { href: 'https://dora-valdez.mykajabi.com/', text: 'Academia', buttonHref: 'https://dora-valdez.mykajabi.com/store', buttonText: 'Unirse ahora', bgImage: '/img/services_academia.jpg', icon: <AcademyIcon /> },
@@ -27,8 +25,6 @@ export default function Index({ posts, solutions, globalData }) {
     { href: '/talks', text: 'Talks', buttonHref: 'https://www.youtube.com/watch?v=Tl5-qt8HioY', buttonText: 'Ver Ted Talk', bgImage: '/img/services_talks.jpg', icon: <TalksIcon /> },
     { href: '/podcast', text: 'Podcast', buttonHref: 'https://open.spotify.com/show/2B2OXSopNuJCdldZHV2FH9?si=6478093dff5b4637', buttonText: 'Escuchar ahora', bgImage: '/img/services_podcast.jpg', icon: <PodcastIcon /> }
   ];
-
-
 
 
   return (
@@ -40,7 +36,7 @@ export default function Index({ posts, solutions, globalData }) {
         className="absolute top-0 -right-50 opacity-100"
       />
 
-        <Image src="/img/dora-hero.png" width={1488} height={1620} alt="Dora Valdez" className='relative z-index-2 md:h-[70vh] xl:h-[90vh] xl:-mr-[80px] 2xl:-mr-0 2xl:h-[93vh] object-contain'/>
+        <Image src="/img/dora-hero.png" width={1488} height={1620} alt="Dora Valdez" className='relative z-index-2 md:h-[70vh] xl:h-[90vh] xl:-mr-[80px] 2xl:-mr-0 2xl:h-[93vh] object-contain' priority={true}/>
         <div className="flex flex-col items-center lg:items-start justify-start gap-4 md:gap-6 lg:gap-8 my-auto relative z-index-2 w-full px-[15px] sm:px-[20px]">
           <h1 className="text-lg md:text-2xl font-medium uppercase !leading-none text-center lg:text-left">
            Hola, 
@@ -57,11 +53,10 @@ export default function Index({ posts, solutions, globalData }) {
             <Button href="#mi-mundo" className="bg-orange md:min-w-[250px] max-w-[350px] px-0 md:px-4 hover:bg-opacity-75 tracking-tighter !leading-none h-[50px] text-center">Conocer más</Button>
           </div>
         </div>
-        <div className='absolute z-0 w-full left-0 bottom-0 py-8'>
+        <div className='absolute z-0 w-full left-0 bottom-0 py-4 lg:py-6'>
           <BrandStrip />
         </div>
       </main>
-
 
       <section className="bg-pinklight w-full" id="mi-mundo">
         <div className='flex flex-col gap-14 md:gap-20 py-12 lg:py-20 px-[15px] bg-pink w-full rounded-t-[36px]'>
@@ -76,21 +71,44 @@ export default function Index({ posts, solutions, globalData }) {
           </div>
           <ul className="grid md:grid-cols-2 xl:grid-cols-4 w-full gap-4 max-w-8xl">
             {services.map((service, index) => (
-              <Link href={service.href} key={index} legacyBehavior>
-                <li className="overflow-hidden flex flex-col justify-center items-center transition p-4 md:p-8 h-[650px] md:h-[700px] lg:h-[750px] xl:h-[650px] 2xl:h-[70vh] bg-cover bg-bottom text-white hover:text-pinklighter transition delay-50 duration-250 w-full rounded-[36px] cursor-pointer" style={{ backgroundImage: `url(${service.bgImage})` }}>
-                  <div className='flex gap-4 mt-auto items-center font-belgro text-xl lg:text-2xl'>
-                    {service.icon} {service.text}
-                  </div>
-                  <div className='flex gap-4 mt-auto w-full z-5'>
-                    <Button href={service.buttonHref} className="text-white bg-green hover:bg-pink !hover:bg-opacity-100 rounded-full h-[50px] text-center !leading-none" fullWidth={true}>{service.buttonText}</Button>
-                    <Button href={service.href} className="text-white bg-green rounded-full w-[50px] h-[50px] !p-0 hover:bg-pink" style={{ pointerEvents: 'none' }}><PlusIcon /></Button>
-                  </div>
-                </li>
-              </Link>
+              <li key={index} className="relative overflow-hidden flex flex-col justify-center items-center transition p-4 md:p-8 h-[650px] md:h-[700px] lg:h-[750px] xl:h-[650px] 2xl:h-[70vh] bg-cover bg-bottom text-white transition delay-50 duration-250 w-full rounded-[36px] cursor-pointer group" style={{ backgroundImage: `url(${service.bgImage})` }}>
+                <Link href={service.href} passHref legacyBehavior>
+                  <a className="absolute inset-0 z-0 hover-trigger" />
+                </Link>
+                <div className='flex gap-4 mt-auto items-center font-belgro text-xl lg:text-2xl z-10'>
+                  {service.icon}
+                  <Link href={service.href} passHref legacyBehavior>
+                    <a className="text-white hover-target">{service.text}</a>
+                  </Link>
+                </div>
+                <div className='flex gap-4 mt-auto w-full z-10'>
+                  {service.buttonHref && (
+                    <a href={service.buttonHref} className="text-white bg-green hover:bg-pink !hover:bg-opacity-100 rounded-full h-[50px] text-center block flex-1 text-center !leading-6 p-3 font-belgro uppercase text-[12px] button-hover">
+                      {service.buttonText}
+                    </a>
+                  )}
+                  <Link href={service.href} passHref legacyBehavior>
+                    <a className="text-white bg-green rounded-full w-[50px] h-[50px] !p-0 hover:bg-pink flex items-center justify-center"><PlusIcon /></a>
+                  </Link>
+                </div>
+              </li>
             ))}
+
+            <style jsx>{`
+              .group:hover .hover-target {
+                color: #E9A5BB; /* Reemplaza con tu color pinklighter */
+              }
+              .button-hover:hover ~ .hover-target {
+                color: white !important; /* Asegúrate de que el texto sea blanco cuando se haga hover en el botón */
+              }
+              .button-hover:hover {
+                color: white !important; /* Mantén el botón de service.buttonText blanco */
+              }
+            `}</style>
             </ul>
           </div>
         </section>
+
 
         <Mission />
 
@@ -108,7 +126,7 @@ export default function Index({ posts, solutions, globalData }) {
             </ButtonArrow>
           </div>
         </div>
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-10">
             {posts.slice(0,3).map((post) => (
               <li
                 key={post.filePath}

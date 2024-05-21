@@ -107,7 +107,7 @@ const closeModal = () => {
           </div>
           
         </main>
-        <section className='flex flex-col gap-10 pt-12 lg:py-20 px-[20px]'>
+        <section className='flex flex-col gap-10 pt-12 lg:py-20 px-[20px] w-full max-w-7xl'>
           <h2 className="text-2xl lg:text-4xl !leading-6 text-center text-pinkcontrast relative uppercase">
             Episodios destacados
           </h2>

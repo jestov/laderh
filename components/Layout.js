@@ -27,7 +27,7 @@ export default function Layout({ children, backgroundColor }) {
       </div>
       <Footer />
       <Link href="https://web.whatsapp.com/send?phone=528112776495" target="_blank" className='z-5'>
-        <WhatsappIcon className='fixed z-10 bottom-10 left-10 w-14 h-14 cursor-pointer'/>
+        <WhatsappIcon className='fixed z-10 bottom-6 left-6 lg:bottom-9 lg:left-9 w-12 h-12 lg:w-14 lg:h-14 cursor-pointer hover:opacity-90'/>
       </Link>
     </div>
   );
