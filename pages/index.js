@@ -36,7 +36,7 @@ export default function Index({ posts, globalData }) {
         className="absolute top-0 -right-50 opacity-100"
       />
 
-        <Image src="/img/dora-hero.png" width={1488} height={1620} alt="Dora Valdez" className='relative z-index-2 md:h-[70vh] xl:h-[90vh] xl:-mr-[80px] 2xl:-mr-0 2xl:h-[93vh] object-contain' priority={true}/>
+        <Image src="/img/dora-hero.png" width={1488} height={1620} alt="Dora Valdez" className='relative z-index-2 md:h-[70vh] xl:h-[90vh] xl:-mr-[80px] 2xl:-mr-0 2xl:h-[93vh] object-contain' />
         <div className="flex flex-col items-center lg:items-start justify-start gap-4 md:gap-6 lg:gap-8 my-auto relative z-index-2 w-full px-[15px] sm:px-[20px]">
           <h1 className="text-lg md:text-2xl font-medium uppercase !leading-none text-center lg:text-left">
            Hola, 
