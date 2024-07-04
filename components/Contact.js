@@ -31,7 +31,7 @@ function Contact() {
                 email: e.target.email.value,
                 phone: e.target.phone.value,
                 company: e.target.company.value,
-                service: e.target.company.value,
+                service: e.target.service.value,
                 message: e.target.message.value,
             }),
         });
