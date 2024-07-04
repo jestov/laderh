@@ -114,7 +114,7 @@ const closeModal = () => {
      
             <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
               {videos.map((video) => (
-                <div key={video.id} onClick={() => openModal(video.id)} className='rounded-[24px] lg:rounded-[36px] overflow-hidden cursor-pointer relative group transition duration-300 w-full'>
+                <div key={video.id} onClick={() => openModal(video.id)} className='rounded-[24px] lg:rounded-[36px] overflow-hidden cursor-pointer relative group transition duration-300 w-full min-h-[338px] bg-black bg-opacity-5'>
                     <Image
                         src={video.thumbnail}
                         alt={video.title}

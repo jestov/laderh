@@ -8,6 +8,7 @@ import Newsletter from '../components/Newsletter';
 import Layout, { GradientBackground } from '../components/Layout';
 import { getGlobalData } from '../utils/global-data';
 import SEO from '../components/SEO';
+import Button from '../components/Button';
 
 export default function Talks({ globalData }) {
 
@@ -58,17 +59,23 @@ const closeModal = () => {
       <SEO title={globalData.name + " | Talks"} description="¿Quieres inspirar a tu audiencia? Envíame un mensaje para solicitar una cotización." />
       <GradientBackground variant="small" className="absolute top-0 -right-50 opacity-100 !-top-50" />
         <main className="flex gap-14 pt-28 lg:pt-48 mb-12 max-w-7xl mx-auto px-[30px] z-10 w-full"> 
-            <div className='flex lg:mb-4 mr-auto w-full'>
+            <div className='flex flex-col gap-10 items-start lg:mb-4 mr-auto w-full'>
                 <h2 className="text-3xl lg:text-5xl text-primary relative uppercase">
                     <span className='z-10 relative'>Talks</span>
                     <Image src="/img/title-line-short.svg" width={100} height={40} alt="" className="absolute -bottom-5 z-0 left-0 right-0 w-full object-contain" />
                 </h2>
+                <div className='flex gap-12 justify-between items-center w-full'>
+                  <p className='text-base text-white font-medium max-w-3xl'>
+                  Si buscas lograr que las cosas sucedan para tu empresa o para tus futuros clientes, <span className='text-primary'>la conferencia de Dora Valdez es lo que necesitas para lograr tus objetivos.</span> Cada conferencia tiene un toque personalizado, entendiendo las necesidades primordiales de cada cliente. Se tiene una reunión de alineación que permite entender el objetivo de la misma.
+                  </p>
+                  <Button href="#form" className="bg-[#56ab78] text-white hover:bg-[#4e9e6c]">Cotizar conferencia</Button>
+                </div>
             </div>   
         </main>
-        <section className="bg-[url('/img/gradient-bg.svg')] bg-no-repeat bg-contain bg-left bg-bottom w-full px-[20px]">
+        <section className="bg-[url('/img/gradient-bg.svg')] bg-no-repeat bg-contain bg-left bg-bottom w-full px-[30px]">
             <div className='w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
                 {videos.map((video) => (
-                    <div key={video.id} onClick={() => openModal(video.id)} className='rounded-[24px] lg:rounded-[36px] overflow-hidden cursor-pointer relative group transition duration-300 w-full'>
+                    <div key={video.id} onClick={() => openModal(video.id)} className='rounded-[24px] lg:rounded-[36px] overflow-hidden cursor-pointer relative group transition duration-300 w-full min-h-[338px] bg-black bg-opacity-5'>
                         <Image
                         src={video.thumbnail}
                         alt={`Thumbnail for video ${video.id}`}
@@ -84,7 +91,7 @@ const closeModal = () => {
                 ))}
                 <Modal isOpen={isModalOpen} onClose={closeModal} src={selectedVideo} />
             </div>
-            <div className='w-full flex flex-col gap-3 py-24 text-center items-center max-w-2xl mx-auto text-white'>
+            <div className='w-full flex flex-col gap-3 py-24 text-center items-center max-w-2xl mx-auto text-white' id='form'>
                 <h4 className='uppercase text-xl lg:text-2xl z-1 relative !leading-5 lg:!leading-6'>¿Quieres <span className='text-yellow'>inspirar a tu audiencia?</span></h4>
                 <p className="text-lg tracking-wide mb-6 !leading-5">Envíame un mensaje para solicitar una cotización.</p>
                 <Contact />

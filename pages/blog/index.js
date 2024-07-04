@@ -98,7 +98,7 @@ export default function Index({ posts, globalData }) {
   const renderFirstPost = (post) => (
     <li
       key={post.filePath}
-      className="overflow-hidden flex flex-col lg:flex-row justify-between transition py-5 px-1 block justify-start items-center text-white flex flex-col gap-5 md:gap-10 group transition delay-50 duration-250 relative"
+      className="overflow-hidden flex flex-col lg:flex-row justify-between py-5 px-1 block justify-start items-center text-white flex flex-col gap-5 md:gap-10 group transition duration-500 relative"
     >
       {post.data.time && (
         <span className="absolute z-10 top-9 left-5 px-4 py-2.5 bg-pink rounded-full font-belgro uppercase text-[11px] group-hover:text-white">
@@ -115,7 +115,7 @@ export default function Index({ posts, globalData }) {
           alt={post.data.title}
           width={600}
           height={200}
-          className="w-full rounded-[36px] h-56 lg:h-80 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition delay-50 duration-250 lg:min-w-[500px] xl:min-w-[600px]"
+          className="w-full rounded-[36px] h-56 lg:h-80 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition duration-500 lg:min-w-[500px] xl:min-w-[600px]"
         />
       </Link>
       <Link
@@ -124,7 +124,7 @@ export default function Index({ posts, globalData }) {
         legacyBehavior
       >
         <a className="block group-hover:text-primary  cursor-pointer  flex flex-col items-start gap-8">
-          <h2 className="text-lg md:text-3xl !leading-none tracking-tight transition delay-150 duration-500">
+          <h2 className="text-lg md:text-3xl !leading-none tracking-tight transition duration-500">
             {post.data.title}
           </h2>
           {post.data.description && (
@@ -132,7 +132,7 @@ export default function Index({ posts, globalData }) {
               {post.data.description}
             </p>
           )}
-          <div className="inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition delay-50 duration-250 group-hover:text-white">
+          <div className="inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition duration-500 group-hover:text-white">
             Leer más <ArrowIcon />
           </div>
         </a>
@@ -143,7 +143,7 @@ export default function Index({ posts, globalData }) {
   const renderOtherPosts = (post) => (
     <li
       key={post.filePath}
-      className="overflow-hidden flex flex-col justify-between transition py-5 px-1 block justify-start items-start text-white flex flex-col gap-5 md:gap-6 group transition delay-50 duration-250"
+      className="overflow-hidden flex flex-col justify-between py-5 px-1 block justify-start items-start text-white flex flex-col gap-5 md:gap-6 group transition duration-500"
     >
       <Link
         as={`/blog/${post.filePath.replace(/\.mdx?$/, '')}`}
@@ -161,7 +161,7 @@ export default function Index({ posts, globalData }) {
             alt={post.data.title}
             width={400}
             height={200}
-            className="w-full rounded-[36px] h-56 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition delay-50 duration-250"
+            className="w-full rounded-[36px] h-56 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition duration-500"
           />
           <h2 className="text-lg md:text-xl !leading-6 tracking-tight transition delay-150 duration-500">
             {post.data.title}
@@ -178,7 +178,7 @@ export default function Index({ posts, globalData }) {
         href={`/blog/[slug]`}
         legacyBehavior
       >
-        <div className="inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition delay-50 duration-250">
+        <div className="inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition duration-500">
           Leer más <ArrowIcon />
         </div>
       </Link>

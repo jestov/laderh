@@ -16,7 +16,7 @@ module.exports = {
         helvetica: ['Helvetica Neue'],
       },
       colors: {
-        primary: '#FFDA03',
+        primary: '#ffda03',
         yellow: '#FAE55D',
         graydark: '#313131',
         pink: '#D4527D',

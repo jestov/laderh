@@ -114,12 +114,12 @@ export default function PostPage({
             {prevPost && (
               <li
                 key={prevPost.slug}
-                className="overflow-hidden flex flex-col justify-between transition py-5 px-1 block justify-start items-end text-white flex flex-col gap-4 md:gap-6 group transition delay-50 duration-250"
+                className="overflow-hidden flex flex-col justify-between py-5 px-1 block justify-start items-end text-white flex flex-col gap-4 md:gap-6 group transition duration-500"
               >
                 <Link href={`/blog/${prevPost.slug}`} legacyBehavior>
                   <a className="block group-hover:text-primary cursor-pointer flex flex-col gap-6 md:gap-8 relative text-right">
-                    <Image src={prevPost.img} alt={prevPost.title} width={400} height={200} className='w-full rounded-[36px] h-64 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition delay-50 duration-250'/>
-                    <h2 className="text-lg md:text-xl !leading-6 tracking-tight transition delay-150 duration-500">{prevPost.title}</h2>
+                    <Image src={prevPost.img} alt={prevPost.title} width={400} height={200} className='w-full rounded-[36px] h-64 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition duration-500'/>
+                    <h2 className="text-lg md:text-xl !leading-6 tracking-tight transition duration-500">{prevPost.title}</h2>
                     {prevPost.description && (
                       <p className="text-base opacity-80 font-clash font-medium text-white">
                         {prevPost.description}
@@ -131,19 +131,19 @@ export default function PostPage({
                   </a>
                 </Link>
                 <Link href={`/blog/${prevPost.slug}`} legacyBehavior>
-                  <div className='inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition delay-50 duration-250'><div className='rotate-180'><ArrowIcon /></div> Post anterior </div>
+                  <div className='inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition duration-250'><div className='rotate-180'><ArrowIcon /></div> Post anterior </div>
                 </Link>
               </li>
             )}
             {nextPost && (
               <li
                 key={nextPost.slug}
-                className="overflow-hidden flex flex-col justify-between transition py-5 px-1 block justify-start items-start text-white flex flex-col gap-4 md:gap-6 group transition delay-50 duration-250"
+                className="overflow-hidden flex flex-col justify-between py-5 px-1 block justify-start items-start text-white flex flex-col gap-4 md:gap-6 group transition duration-500"
               >
                 <Link href={`/blog/${nextPost.slug}`} legacyBehavior>
                   <a className="block group-hover:text-primary cursor-pointer flex flex-col gap-6 md:gap-8 relative">
-                    <Image src={nextPost.img} alt={nextPost.title} width={400} height={200} className='w-full rounded-[36px] h-64 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition delay-50 duration-250'/>
-                    <h2 className="text-lg md:text-xl !leading-6 tracking-tight transition delay-150 duration-500">{nextPost.title}</h2>
+                    <Image src={nextPost.img} alt={nextPost.title} width={400} height={200} className='w-full rounded-[36px] h-64 object-cover cursor-pointer opacity-85 group-hover:opacity-100 transition duration-500'/>
+                    <h2 className="text-lg md:text-xl !leading-6 tracking-tight transition duration-500">{nextPost.title}</h2>
                     {nextPost.description && (
                       <p className="text-base opacity-80 font-clash font-medium text-white">
                         {nextPost.description}
@@ -155,7 +155,7 @@ export default function PostPage({
                   </a>
                 </Link>
                 <Link href={`/blog/${nextPost.slug}`} legacyBehavior>
-                  <div className='inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition delay-50 duration-250'>Siguiente post <ArrowIcon /></div>
+                  <div className='inline-flex items-center gap-10 text-base bg-white bg-opacity-20 px-5 py-3 rounded-full font-belgro !text-[12px] uppercase cursor-pointer group-hover:bg-opacity-30 transition duration-500'>Siguiente post <ArrowIcon /></div>
                 </Link>
               </li>
             )}

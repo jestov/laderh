@@ -71,24 +71,24 @@ export default function Index({ posts, globalData }) {
           </div>
           <ul className="grid md:grid-cols-2 xl:grid-cols-4 w-full gap-4 max-w-8xl">
             {services.map((service, index) => (
-              <li key={index} className="relative overflow-hidden flex flex-col justify-center items-center transition p-4 md:p-8 h-[650px] md:h-[700px] lg:h-[750px] xl:h-[650px] 2xl:h-[70vh] bg-cover bg-bottom text-white transition delay-50 duration-250 w-full rounded-[36px] cursor-pointer group" style={{ backgroundImage: `url(${service.bgImage})` }}>
+              <li key={index} className="relative overflow-hidden flex flex-col justify-center items-center transition p-4 md:p-8 h-[650px] md:h-[700px] lg:h-[750px] xl:h-[650px] 2xl:h-[70vh] bg-cover bg-bottom text-white duration-500 w-full rounded-[36px] cursor-pointer group" style={{ backgroundImage: `url(${service.bgImage})` }}>
                 <Link href={service.href} passHref legacyBehavior>
                   <a className="absolute inset-0 z-0 hover-trigger" />
                 </Link>
                 <div className='flex gap-4 mt-auto items-center font-belgro text-xl lg:text-2xl z-10'>
                   {service.icon}
                   <Link href={service.href} passHref legacyBehavior>
-                    <a className="text-white hover-target">{service.text}</a>
+                    <a className="text-white hover-target transition duration-500">{service.text}</a>
                   </Link>
                 </div>
                 <div className='flex gap-4 mt-auto w-full z-10'>
                   {service.buttonHref && (
-                    <a href={service.buttonHref} className="text-white bg-green hover:bg-pink !hover:bg-opacity-100 rounded-full h-[50px] text-center block flex-1 text-center !leading-6 p-3 font-belgro uppercase text-[12px] button-hover">
+                    <a href={service.buttonHref} className="text-white bg-green hover:bg-pink !hover:bg-opacity-100 rounded-full h-[50px] text-center block flex-1 text-center !leading-6 p-3 font-belgro uppercase text-[12px] button-hover transition duration-500">
                       {service.buttonText}
                     </a>
                   )}
                   <Link href={service.href} passHref legacyBehavior>
-                    <a className="text-white bg-green rounded-full w-[50px] h-[50px] !p-0 hover:bg-pink flex items-center justify-center"><PlusIcon /></a>
+                    <a className="text-white bg-green rounded-full w-[50px] h-[50px] !p-0 hover:bg-pink flex items-center justify-center transition duration-500"><PlusIcon /></a>
                   </Link>
                 </div>
               </li>
