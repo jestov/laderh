@@ -60,7 +60,7 @@ export default function Menu() {
 
   const menuOptions = [
     { name: 'Acerca De', path: '/acerca-de' },
-    { name: 'Academia', path: 'https://dora-valdez.mykajabi.com/' },
+    { name: 'Academia', path: 'https://academia.laderh.com' },
     { name: 'Coaching', path: '/coaching' },
     { name: 'Libro', path: '/libro' },
     { name: 'Podcast', path: '/podcast' },
