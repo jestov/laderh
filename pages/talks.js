@@ -64,7 +64,7 @@ const closeModal = () => {
                     <span className='z-10 relative'>Talks</span>
                     <Image src="/img/title-line-short.svg" width={100} height={40} alt="" className="absolute -bottom-5 z-0 left-0 right-0 w-full object-contain" />
                 </h2>
-                <div className='flex gap-12 justify-between items-center w-full'>
+                <div className='flex flex-col md:flex-row gap-12 justify-between items-center w-full'>
                   <p className='text-base text-white font-medium max-w-3xl'>
                   Si buscas lograr que las cosas sucedan para tu empresa o para tus futuros clientes, <span className='text-primary'>la conferencia de Dora Valdez es lo que necesitas para lograr tus objetivos.</span> Cada conferencia tiene un toque personalizado, entendiendo las necesidades primordiales de cada cliente. Se tiene una reunión de alineación que permite entender el objetivo de la misma.
                   </p>
@@ -75,7 +75,7 @@ const closeModal = () => {
         <section className="bg-[url('/img/gradient-bg.svg')] bg-no-repeat bg-contain bg-left bg-bottom w-full px-[30px]">
             <div className='w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
                 {videos.map((video) => (
-                    <div key={video.id} onClick={() => openModal(video.id)} className='rounded-[24px] lg:rounded-[36px] overflow-hidden cursor-pointer relative group transition duration-300 w-full min-h-[338px] bg-black bg-opacity-5'>
+                    <div key={video.id} onClick={() => openModal(video.id)} className='rounded-[24px] lg:rounded-[36px] overflow-hidden cursor-pointer relative group transition duration-300 w-full md:min-h-[338px] bg-black bg-opacity-5'>
                         <Image
                         src={video.thumbnail}
                         alt={`Thumbnail for video ${video.id}`}
