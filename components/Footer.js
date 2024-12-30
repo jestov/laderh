@@ -96,7 +96,7 @@ export default function Footer() {
             © {new Date().getFullYear()} LADERH.
             <br />
             Desarrollado por{' '}
-            <Link href="https:/jestov.xyz" target="_blank">
+            <Link href="https://jestov.xyz" target="_blank">
               {' '}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
