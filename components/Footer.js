@@ -99,8 +99,8 @@ export default function Footer() {
             <Link href="https://osmium.agency" target="_blank">
               {' '}
               <svg
-                width="105"
-                height="21"
+                width="80"
+                height="16"
                 viewBox="0 0 105 21"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
