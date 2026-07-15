@@ -1,6 +1,7 @@
 import 'prismjs/themes/prism-tomorrow.css';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Script from 'next/script';
 import Loading from '../components/Loading';
 import '../styles/globals.css';
 
@@ -48,6 +49,19 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      {/* Google tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-JS4FMCF1FW"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-JS4FMCF1FW');
+        `}
+      </Script>
       <Loading isLoading={loading} />
       <Component {...pageProps} />
     </>
