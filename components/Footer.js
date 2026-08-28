@@ -101,8 +101,9 @@ export default function Footer() {
           <p className="text-[10px] uppercase font-belgro">
             © {new Date().getFullYear()} LADERH.
             <br />
-            Diseñado y desarrollado por{' '}
+            
             <Link href="https://osmium.agency" target="_blank" rel="noopener">
+            Diseñado y desarrollado por{' '}
               {' '}
               <svg
                 width="80"
