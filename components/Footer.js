@@ -46,7 +46,7 @@ const menuItems = [
   {
     links: [
       { name: 'Acerca De', href: '/acerca-de' },
-      { name: 'Academia', href: '/solutions/hiring' },
+      { name: 'Academia', href: '/solutions/hiring', disabled: true },
       { name: 'Coaching', href: '/coaching' },
       { name: 'Libro', href: '/libro' },
       { name: 'Podcast', href: '/podcast' },
@@ -77,12 +77,18 @@ export default function Footer() {
             <ul className="flex flex-col md:flex-row gap-8 md:gap-4 lg:gap-10 text-[11px] tracking-wide font-belgro uppercase items-center justify-center">
               {menu.links.map((link, linkIndex) => (
                 <li key={linkIndex}>
-                  <Link
-                    href={link.href}
-                    className={`hover:opacity-85 py-2.5 ${isActive(link.href) ? 'text-primary border-b-[3px] border-primary' : ''}`}
-                  >
-                    {link.name}
-                  </Link>
+                  {link.disabled ? (
+                    <span className="py-2.5 opacity-50 cursor-not-allowed">
+                      {link.name}
+                    </span>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className={`hover:opacity-85 py-2.5 ${isActive(link.href) ? 'text-primary border-b-[3px] border-primary' : ''}`}
+                    >
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -95,8 +101,8 @@ export default function Footer() {
           <p className="text-[10px] uppercase font-belgro">
             © {new Date().getFullYear()} LADERH.
             <br />
-            Desarrollado por{' '}
-            <Link href="https://osmium.agency" target="_blank">
+            Diseñado y desarrollado por{' '}
+            <Link href="https://osmium.agency" target="_blank" rel="noopener">
               {' '}
               <svg
                 width="80"
@@ -106,6 +112,7 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
                 className="inline"
               >
+                <title>Osmium Agency</title>
                 <path
                   d="M27.2692 19.8551C26.1628 19.8551 25.1688 19.6675 24.2874 19.2924C23.4059 18.8986 22.6933 18.3548 22.1494 17.6609C21.6243 16.9482 21.2961 16.1137 21.1649 15.1572H23.5841C23.7341 15.8886 24.1186 16.5263 24.7375 17.0701C25.3751 17.5952 26.2284 17.8578 27.2974 17.8578C28.2913 17.8578 29.0227 17.6515 29.4916 17.2389C29.9604 16.8076 30.1948 16.3012 30.1948 15.7198C30.1948 15.1572 30.0542 14.7259 29.7729 14.4258C29.5103 14.1258 29.1165 13.9007 28.5914 13.7507C28.085 13.5819 27.4568 13.4225 26.7066 13.2725C25.919 13.1037 25.15 12.8786 24.3999 12.5973C23.6497 12.2973 23.0309 11.8941 22.5433 11.3877C22.0557 10.8813 21.8119 10.2156 21.8119 9.39041C21.8119 8.56524 22.0182 7.84322 22.4307 7.22434C22.8433 6.60546 23.4247 6.11786 24.1748 5.76154C24.9438 5.40522 25.8439 5.22706 26.8754 5.22706C28.357 5.22706 29.5666 5.60213 30.5043 6.35229C31.4607 7.08369 32.014 8.1339 32.164 9.50294H29.8291C29.7354 8.79029 29.4259 8.23705 28.9008 7.84322C28.3945 7.43063 27.7099 7.22434 26.8473 7.22434C26.0033 7.22434 25.347 7.4025 24.8781 7.75883C24.428 8.11515 24.203 8.584 24.203 9.16537C24.203 9.54044 24.3343 9.85926 24.5968 10.1218C24.8594 10.3844 25.2344 10.6094 25.722 10.797C26.2284 10.9845 26.8191 11.1533 27.4943 11.3033C28.432 11.4908 29.2853 11.7253 30.0542 12.0066C30.8231 12.2879 31.442 12.7005 31.9108 13.2443C32.3797 13.7694 32.6141 14.529 32.6141 15.5229C32.6328 16.3481 32.4172 17.0889 31.9671 17.7453C31.5357 18.4016 30.9169 18.9174 30.1104 19.2924C29.3228 19.6675 28.3757 19.8551 27.2692 19.8551Z"
                   fill="currentColor"
@@ -141,6 +148,7 @@ export default function Footer() {
                   fill="currentColor"
                 ></path>
               </svg>
+              <span className="sr-only">Osmium Agency</span>
             </Link>
           </p>
         </div>

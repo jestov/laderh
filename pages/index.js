@@ -3,7 +3,6 @@ import Image from   'next/image';
 import { getPosts } from '../utils/mdx-utils';
 import Layout, { GradientBackground } from '../components/Layout';
 import ArrowIcon from '../components/icons/ArrowIcon';
-import AcademyIcon from '../components/icons/AcademyIcon';
 import CoachingIcon from '../components/icons/CoachingIcon';
 import TalksIcon from '../components/icons/TalksIcon';
 import PodcastIcon from '../components/icons/PodcastIcon';
@@ -20,7 +19,6 @@ import React from 'react';
 export default function Index({ posts, globalData }) {
 
   const services = [
-    { href: 'https://dora-valdez.mykajabi.com/', text: 'Academia', buttonHref: 'https://dora-valdez.mykajabi.com/store', buttonText: 'Unirse ahora', bgImage: '/img/services_academia.jpg', icon: <AcademyIcon /> },
     { href: '/coaching', text: 'Coaching', buttonHref: 'https://calendly.com/doravaldez/coaching-con-la-de-rh', buttonText: 'Agendar sesión', bgImage: '/img/services_coaching.jpg', icon: <CoachingIcon /> },
     { href: '/talks', text: 'Talks', buttonHref: 'https://www.youtube.com/watch?v=Tl5-qt8HioY', buttonText: 'Ver Ted Talk', bgImage: '/img/services_talks.jpg', icon: <TalksIcon /> },
     { href: '/podcast', text: 'Podcast', buttonHref: 'https://open.spotify.com/show/2B2OXSopNuJCdldZHV2FH9?si=6478093dff5b4637', buttonText: 'Escuchar ahora', bgImage: '/img/services_podcast.jpg', icon: <PodcastIcon /> }
@@ -69,7 +67,7 @@ export default function Index({ posts, globalData }) {
                 <Image src="/img/title-line.svg" width={100} height={10} alt="" className="absolute -bottom-4 md:-bottom-8 z-0 left-0 right-0 w-full" />
               </h2>
           </div>
-          <ul className="grid md:grid-cols-2 xl:grid-cols-4 w-full gap-4 max-w-8xl">
+          <ul className="grid md:grid-cols-2 xl:grid-cols-3 w-full gap-4 max-w-8xl">
             {services.map((service, index) => (
               <li key={index} className="relative overflow-hidden flex flex-col justify-center items-center transition p-4 md:p-8 h-[650px] md:h-[700px] lg:h-[750px] xl:h-[650px] 2xl:h-[70vh] bg-cover bg-bottom text-white duration-500 w-full rounded-[36px] cursor-pointer group" style={{ backgroundImage: `url(${service.bgImage})` }}>
                 <Link href={service.href} passHref legacyBehavior>
