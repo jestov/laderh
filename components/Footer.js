@@ -149,7 +149,6 @@ export default function Footer() {
                   fill="currentColor"
                 ></path>
               </svg>
-              <span className="sr-only">Osmium Agency</span>
             </Link>
           </p>
         </div>
